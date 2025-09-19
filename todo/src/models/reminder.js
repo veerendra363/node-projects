@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const Reminder = sequelize.define('Reminder', {
     remind_at: { type: DataTypes.DATE, allowNull: false },
     sent: { type: DataTypes.BOOLEAN, defaultValue: false }

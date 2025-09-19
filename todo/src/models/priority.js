@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const Priority = sequelize.define('Priority', {
     name: { type: DataTypes.STRING, allowNull: false, unique: true }
   }, {

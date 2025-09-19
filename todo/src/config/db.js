@@ -1,4 +1,5 @@
-const { Pool } = require("pg");
+import pkg from "pg";
+const { Pool } = pkg;
 
 const pool = new Pool({
   user: "postgres",          // default postgres user
@@ -12,4 +13,4 @@ pool.connect()
   .then(() => console.log("✅ Connected to PostgreSQL"))
   .catch(err => console.error("❌ DB Connection Failed", err));
 
-module.exports = pool;
+export default pool;
